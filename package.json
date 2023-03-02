@@ -1,0 +1,15 @@
+{
+  "name": "sim-template",
+  "version": "2.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
