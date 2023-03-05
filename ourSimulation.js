@@ -11,6 +11,7 @@ function buildWorld() {
 
 	flugi = new Actor({img: "img/flugi50.png", x: -40, y: 60, wUnits: 14});
 	glider = new Actor({img: "img/Segelflieger50.png", x: 0, y: 100, wUnits: 14});
+	circle = new Circle({x: 100, y: 100, color: 0x882222, r: 5})
 }
 
 function setup() {
@@ -31,6 +32,6 @@ function taste(event) {
 function loop() {
 	flugi.x += flugi.vx * dt
 	glider.x += glider.vx * dt
-
+	circle.y -= 1
 	world.update();
 }

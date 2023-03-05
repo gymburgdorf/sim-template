@@ -185,6 +185,32 @@ class Line {
   }
 }
 
+class Circle {
+  constructor(params) {
+    var params = params || {};
+    this.world = params.world || world;
+    this.x = params.x || 0;
+    this.y = params.y || 0;
+    this.color = params.color || "#123";
+    this.alpha = params.alpha || 1;
+    this.r = params.r || 1;
+    this.graphic = new PIXI.Graphics();
+    this.graphic.beginFill(this.color);
+    this.graphic.drawCircle(0, 0, world.pxPerUnit * this.r);
+    this.graphic.endFill();
+    this.draw()
+    this.world.actors.push(this)
+    this.world.stage.addChild(this.graphic);
+    this.world.renderer.render(world.stage);
+  }
+  destroy() {
+    this.world.stage.removeChild(this.graphicscircle);
+  }
+  draw() {
+    this.graphic.position = this.world.unitsToPx(this);
+  }
+}
+
 function PassiveSprite(params) {
   var params = params || {};
   this.world = params.world || world;
