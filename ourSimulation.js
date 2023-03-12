@@ -33,5 +33,7 @@ function loop() {
 	flugi.x += flugi.vx * dt
 	glider.x += glider.vx * dt
 	circle.y -= 1
+	circle.setRadius(circle.r + 0.1)
+	circle.setColor(circle.y % 2 > 1 ? `#a00` : `#00a`)
 	world.update();
 }

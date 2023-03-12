@@ -201,11 +201,11 @@ class Circle {
     this.world.stage.addChild(this.graphic);
     this.world.renderer.render(world.stage);
   }
-  set r(value) {
+  setRadius(value) {
     this.r = value
     this.resetGraphic()
   }
-  set color(value) {
+  setColor(value) {
     this.color = value
     this.resetGraphic()
   }
