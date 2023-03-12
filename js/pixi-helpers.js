@@ -195,13 +195,25 @@ class Circle {
     this.alpha = params.alpha || 1;
     this.r = params.r || 1;
     this.graphic = new PIXI.Graphics();
-    this.graphic.beginFill(this.color);
-    this.graphic.drawCircle(0, 0, world.pxPerUnit * this.r);
-    this.graphic.endFill();
+    this.resetGraphic()
     this.draw()
     this.world.actors.push(this)
     this.world.stage.addChild(this.graphic);
     this.world.renderer.render(world.stage);
+  }
+  set r(value) {
+    this.r = value
+    this.resetGraphic()
+  }
+  set color(value) {
+    this.color = value
+    this.resetGraphic()
+  }
+  resetGraphic() {
+    this.graphic.clear()
+    this.graphic.beginFill(this.color);
+    this.graphic.drawCircle(0, 0, world.pxPerUnit * this.r);
+    this.graphic.endFill();
   }
   destroy() {
     this.world.stage.removeChild(this.graphicscircle);
