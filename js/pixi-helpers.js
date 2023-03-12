@@ -191,7 +191,7 @@ class Circle {
     this.world = params.world || world;
     this.x = params.x || 0;
     this.y = params.y || 0;
-    this.color = params.color || "#123";
+    this.color = params.color || 0xaabbcc;
     this.alpha = params.alpha || 1;
     this.r = params.r || 1;
     this.graphic = new PIXI.Graphics();

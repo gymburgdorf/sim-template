@@ -34,6 +34,6 @@ function loop() {
 	glider.x += glider.vx * dt
 	circle.y -= 1
 	circle.setRadius(circle.r + 0.1)
-	circle.setColor(circle.y % 2 > 1 ? `#a00` : `#00a`)
+	circle.setColor(circle.y % 20 > 10 ? 0xffeedd : 0xaaccee)
 	world.update();
 }
